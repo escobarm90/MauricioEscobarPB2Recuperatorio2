@@ -9,7 +9,8 @@ public class Batalla {
 	private Villano villano;
 	private Heroe heroe;
 	private String ganador;
-	private Set<Personaje> ganadores;
+	private Set<Villano> villanosGanadores = new HashSet<Villano>();
+	private Set<Heroe> heroesGanadores = new HashSet<Heroe>();
 	
 	public Batalla(Villano villano, Heroe heroe) {
 		this.villano = villano;
@@ -19,8 +20,10 @@ public class Batalla {
 	public String getGanadorBatalla(Villano villano, Heroe heroe) {
 		if(villano.getPoder()>heroe.getPoder()) {
 			ganador = villano.getNombre().getName();
+			villanosGanadores.add(villano);
 		}else if(villano.getPoder()<heroe.getPoder() ) {
 			ganador = heroe.getNombre().getName();
+			heroesGanadores.add(heroe);
 		}return ganador;
 	}
 	
