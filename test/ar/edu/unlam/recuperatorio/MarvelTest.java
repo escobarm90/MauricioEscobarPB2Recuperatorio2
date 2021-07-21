@@ -40,19 +40,7 @@ public class MarvelTest {
 		assertEquals(poderThor,thor.getPoder());		
 	}
 	
-	@Test (expected=CantidadDeGemasExedidaException.class)
-	public void queLasGemasSeanRepartidasEntreHeroesYVillanos() throws Exception {
-		Gema tiempo = new Tiempo("TIEMPO",50);
-		Gema alma = new Alma("TIEMPO",50);
-		Gema espacio = new Espacio("TIEMPO",50);
-		
-		Heroe thor = new Heroe(Heroes.THOR,50,tiempo);
-		
-		thor.poseerGema(tiempo);
-		thor.poseerGema(alma);
-		thor.poseerGema(espacio);
-		
-	}
+
 	
 	@Test
 	public void queEnUnaBatallaGaneElPersonajeConMasPoder() throws Exception {
