@@ -9,7 +9,7 @@ public class Batalla {
 	private Villano villano;
 	private Heroe heroe;
 	private String ganador;
-	
+	private Set<Personaje> ganadores;
 	
 	public Batalla(Villano villano, Heroe heroe) {
 		this.villano = villano;

@@ -16,9 +16,8 @@ public abstract class Personaje {
 	}	
 	
 	public void poseerGema(Gema gema)throws Exception {
-		if(this.cantidadDegemas<=3) {
-		this.poder = poder * gema.getMultiplicadorDePoder();
-		this.cantidadDegemas = cantidadDegemas + contador;
+		if(this.cantidadDegemas<=1) {
+		this.poder = poder * gema.multiplicadorDePoder();		
 		}else throw new CantidadDeGemasExedidaException("maxima");
 	}
 
