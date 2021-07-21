@@ -3,32 +3,30 @@ package ar.edu.unlam.recuperatorio;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Villano extends Personaje implements Comparable<String> {
+public class Villano extends Personaje implements Comparable<Villano> {
 	
 
 
 	private Villanos nombre;
-	private Set<Gema> gemas;
+	private Gema gema;
 	
 		public Villano(Villanos nombre, Integer poder) {
 			super(poder);
 			this.nombre = nombre;
-			this.gemas = new HashSet<Gema>();
+			this.gema = gema;
 		}
 
 		public Villanos getNombre() {
 			return nombre;
 		}
 
-		public Set<Gema> getGemas() {
-			return gemas;
-		}
+	
 
 		@Override
-		public int compareTo(String o) {
-			// TODO Auto-generated method stub
-			return 0;
+		public int compareTo(Villano o) {
+			return o.nombre.getName().compareTo(this.nombre.getName());
 		}
+	
 		
 		
 		

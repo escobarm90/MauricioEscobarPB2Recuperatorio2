@@ -3,7 +3,7 @@ package ar.edu.unlam.recuperatorio;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Heroe extends Personaje implements Comparable{
+public class Heroe extends Personaje implements Comparable<Heroe>{
 
 	private Heroes nombre;
 	private Gema gema;
@@ -23,9 +23,13 @@ public class Heroe extends Personaje implements Comparable{
 	}
 
 	@Override
-	public int compareTo(Object o) {
+	public int compareTo(Heroe o) {
+		return this.nombre.getName().compareTo(o.nombre.getName());
 		
-		return 0;
+	}
+
+	
+	
 	}
 	
 	
@@ -36,4 +40,4 @@ public class Heroe extends Personaje implements Comparable{
 	
 	
 
-}
+
