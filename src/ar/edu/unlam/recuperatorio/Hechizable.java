@@ -1,9 +1,5 @@
 package ar.edu.unlam.recuperatorio;
 
-public abstract class Gema {
-	
-	
-	
-	
+public interface Hechizable {
 
 }

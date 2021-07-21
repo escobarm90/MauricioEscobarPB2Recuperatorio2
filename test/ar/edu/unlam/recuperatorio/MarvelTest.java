@@ -4,7 +4,6 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import ar.edu.unlam.practica1.EXCEPTIONS.VehiculoIncompatibleException;
 
 public class MarvelTest {
 
@@ -23,7 +22,7 @@ public class MarvelTest {
 	}
 	
 	@Test
-	public void queCuandoUnPersonajePoseaUnaGemaSeMultipliqueSuPoder() {
+	public void queCuandoUnPersonajePoseaUnaGemaSeMultipliqueSuPoder() throws Exception {
 		Heroe thor = new Heroe(Heroes.Thor,50);
 		Villano loki = new Villano(Villanos.Loki,60);
 		Gema tiempo = new Gema(NombresGemas.TIEMPO);
@@ -34,7 +33,7 @@ public class MarvelTest {
 	}
 	
 	@Test (expected=CantidadDeGemasExedidaException.class)
-	public void queLasGemasSeanRepartidasEntreHeroesYVillanos() {
+	public void queLasGemasSeanRepartidasEntreHeroesYVillanos() throws Exception {
 		Heroe thor = new Heroe(Heroes.Thor,50);
 		Gema tiempo = new Gema(NombresGemas.TIEMPO);
 		Gema alma = new Gema(NombresGemas.ALMA);
@@ -45,6 +44,19 @@ public class MarvelTest {
 		thor.poseerGema(alma);
 		thor.poseerGema(espacio);
 		thor.poseerGema(mente);
+	}
+	
+	@Test
+	public void queEnUnaBatallaGaneElPersonajeConMasPoder() throws Exception {
+		Heroe thor = new Heroe(Heroes.Thor,50);
+		Villano loki = new Villano(Villanos.Loki,60);
+		Gema tiempo = new Gema(NombresGemas.TIEMPO);
+		Gema alma = new Gema(NombresGemas.ALMA);
+		
+		thor.poseerGema(tiempo);
+		loki.poseerGema(alma);
+		
+		
 	}
 	
 	
