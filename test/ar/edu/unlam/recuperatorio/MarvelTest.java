@@ -86,6 +86,8 @@ public class MarvelTest {
 		ironMan.poseerGema(tiempo);
 		ronnan.poseerGema(alma);
 		
+		Batalla nueva = new Batalla(loki,hulk);
+		Batalla nueva2 = new Batalla(ronnan,ironMan);
 		
 		
 	}

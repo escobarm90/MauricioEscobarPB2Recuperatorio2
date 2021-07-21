@@ -2,6 +2,7 @@ package ar.edu.unlam.recuperatorio;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class Batalla {
 	
@@ -9,8 +10,8 @@ public class Batalla {
 	private Villano villano;
 	private Heroe heroe;
 	private String ganador;
-	private Set<Villano> villanosGanadores = new HashSet<Villano>();
-	private Set<Heroe> heroesGanadores = new HashSet<Heroe>();
+	private Set<Villano> villanosGanadores = new TreeSet<Villano>();
+	private Set<Heroe> heroesGanadores = new TreeSet<Heroe>();
 	
 	public Batalla(Villano villano, Heroe heroe) {
 		this.villano = villano;
@@ -27,6 +28,10 @@ public class Batalla {
 		}return ganador;
 	}
 	
+	
+//	public HashSet<Villano> villanosGanadores(){
+//		return villanosGanadores;
+//	}
 	
 	
 	
