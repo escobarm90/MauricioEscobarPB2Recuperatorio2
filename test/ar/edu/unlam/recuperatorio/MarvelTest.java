@@ -74,9 +74,15 @@ public class MarvelTest {
 		ironMan.poseerGema(tiempo);
 		ronnan.poseerGema(alma);
 		
-		Batalla nueva = new Batalla(loki,hulk);
-		Batalla nueva2 = new Batalla(ronnan,ironMan);
+		Heroe blackWidow = new Heroe(Heroes.BLACK_WIDOW,50,tiempo);
+		Villano soldadoInvierno = new Villano(Villanos.SOLDADO_DEL_INVIERNO,60);
 		
+		blackWidow.poseerGema(tiempo);
+		soldadoInvierno.poseerGema(alma);
+		
+		Batalla nueva = new Batalla(loki,hulk);
+		nueva.getGanadorBatalla(ronnan, ironMan);
+		nueva.getGanadorBatalla(soldadoInvierno, ironMan);
 		
 	}
 	

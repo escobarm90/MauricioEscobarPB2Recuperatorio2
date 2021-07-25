@@ -29,9 +29,9 @@ public class Batalla {
 	}
 	
 	
-//	public HashSet<Villano> villanosGanadores(){
-//		return villanosGanadores;
-//	}
+	public Set<Villano> villanosGanadores(){
+		return villanosGanadores;
+	}
 	
 	
 	
